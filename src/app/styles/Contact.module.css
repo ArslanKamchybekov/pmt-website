@@ -1,0 +1,56 @@
+.contactSection {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .submitButton {
+    padding: 0.75rem 2rem;
+    background-color: #f0a500;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submitButton:hover {
+    background-color: #d48800;
+  }
+  
+  /* Confirmation Message */
+  .confirmationMessage {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e7f9e7;
+    border: 1px solid #a3dca3;
+    border-radius: 10px;
+    color: #2a7a2a;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contactSection {
+      padding: 1.5rem;
+    }
+  
+    .submitButton {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+    }
+  }
+  
