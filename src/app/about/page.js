@@ -28,7 +28,7 @@ export default function About() {
       <Imagedheader />
       <div className={styles.aboutSection}>
         {/* Intro Section */}
-        <section className={styles.intro}>
+        <section>
           <h1>About PMT</h1>
           <p>
             adss is a student-run finance organization that aims to prepare students for the world of
@@ -45,13 +45,16 @@ export default function About() {
         </section>
 
         {/* Mission Section */}
-        <section className={styles.mission}>
-          <h1>Our Mission</h1>
-          <p>
-            We empower students with the knowledge, skills, and network to succeed in the financial industry.
-            Through stock pitches, market research, and portfolio management, we provide a collaborative environment
-            for learning and growth.
-          </p>
+        <section>
+          <div className={'m-auto w-min'}>
+            <h1>Our Mission</h1>
+            <p>
+              We empower students with the knowledge, skills, and network to succeed in the financial industry.
+              Through stock pitches, market research, and portfolio management, we provide a collaborative environment
+              for learning and growth.
+            </p>
+          </div>
+
         </section>
 
         {/* Highlights Section */}
@@ -81,6 +84,12 @@ export default function About() {
           </div>
         </section>
       </div>
+      {/* why? */}
+      <footer className={styles.footer}>
+        <div>
+          Portfolio Management Team
+        </div>
+      </footer>
     </div>
   );
 }

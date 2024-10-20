@@ -3,38 +3,59 @@
   /* max-width: 1200px; */
   margin: 0 auto;
   color: #333;
+
+  & section {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 2rem;
+    /* margin-bottom: 5rem; */
+    height: 50vh;
+  }
+
+  & section:nth-child(2){
+    width: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    height: min-content;
+    background-color: #0a0a0a;
+    color: #ffffff;
+
+    & h1{
+      width:min-content;
+      white-space: nowrap;
+      margin: auto;
+    }
+
+  }
+
+  & h1 {
+    font-size: x-large;
+    font-weight: bold;
+    width: 50%;
+  }
+
+  & p:not(.card p){
+    width: 50vw;
+    padding-left: 5px;
+  }
 }
 
-.aboutSection section{
-  width: 100%;
-  background-color: #f0f0f0;
-  padding: 2rem;
-  margin-bottom: 30rem;
-  height: 40vh;
-}
-
-.caption{
+.caption {
   background-color: #31343C;
   color: #ffffff;
   width: 100%;
   /* height: 4rem; */
-  transform: translate(1rem,-2.5rem);
+  transform: translate(1rem, -2.5rem);
   padding: 1rem;
   font-style: italic;
   font-size: small;
 }
 
-.aboutSection h1{
-  font-size:x-large;
-  font-weight: bold;
+
+.footer{
+  height: 15vh;
 }
-
-.aboutSection p{
-  width: 50%;
-  padding-left: 5px;
-}
-
-
 
 /* Mission Section */
 /* .mission {
