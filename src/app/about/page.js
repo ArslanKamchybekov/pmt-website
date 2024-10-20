@@ -87,7 +87,9 @@ export default function About() {
       {/* why? */}
       <footer className={styles.footer}>
         <div>
+          <p>
           Portfolio Management Team
+          </p>
         </div>
       </footer>
     </div>

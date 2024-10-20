@@ -12,7 +12,7 @@
     height: 50vh;
   }
 
-  & section:nth-child(2){
+  & section:nth-child(2) {
     width: 100%;
     padding: 2rem;
     padding-top: 5rem;
@@ -21,8 +21,8 @@
     background-color: #0a0a0a;
     color: #ffffff;
 
-    & h1{
-      width:min-content;
+    & h1 {
+      width: min-content;
       white-space: nowrap;
       margin: auto;
     }
@@ -35,7 +35,7 @@
     width: 50%;
   }
 
-  & p:not(.card p){
+  & p:not(.card p) {
     width: 50vw;
     padding-left: 5px;
   }
@@ -53,8 +53,22 @@
 }
 
 
-.footer{
-  height: 15vh;
+.footer {
+  height: 10vh;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  /* background-color: #2196F3; */
+  padding: 10px;
+
+  & div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* text-align: center; */
+    padding: 1rem;
+    padding-right: 0.25rem;
+    font-size: 30px;
+    font-style: italic;
+  }
 }
 
 /* Mission Section */
