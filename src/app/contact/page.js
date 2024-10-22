@@ -27,7 +27,7 @@ export default function Contact() {
     <div>
       <Navbar />
       <div className={styles.contactSection}>
-        <h1>Contact Us</h1>
+        <h1 className={styles.title}>Contact Us</h1>
         <p>Feel free to reach out to us with any questions or inquiries.</p>
 
         {/* Form Section */}
