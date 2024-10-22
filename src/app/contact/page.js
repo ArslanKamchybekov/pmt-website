@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import styles from '../styles/Contact.module.css';
+import Images from "../styles/images/background-image.jpg"
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -26,9 +27,13 @@ export default function Contact() {
   return (
     <div>
       <Navbar />
+      <div className={styles.banner}>
+        <h2>Contact Us</h2>
+      </div>
+
       <div className={styles.contactSection}>
-        <h1 className={styles.title}>Contact Us</h1>
-        <p>Feel free to reach out to us with any questions or inquiries.</p>
+        <h1 className={styles.title}>Get in Touch</h1>
+        <p className={styles.sub_title}>Feel free to reach out to us with any questions or inquiries.</p>
 
         {/* Form Section */}
         <form className={styles.contactForm} onSubmit={handleSubmit}>

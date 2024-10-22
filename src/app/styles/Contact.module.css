@@ -1,8 +1,27 @@
+.banner {
+    widht: 100%;
+    height: 20rem;
+    background-image: url("../styles/images/background-image.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    color: white;
+}
+
 .contactSection {
-    padding: 2em 1em;
-    max-width: 800px;
-    margin: 2em auto 0 auto;
+    padding: 4em 1em 5.5em 1em;
+    /*margin: 2em 0 2em 0;*/
+    max-width: 700px;
+    margin: 3em auto 2em auto;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 10px;
   }
   
   .contactForm {
@@ -10,12 +29,18 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    margin: 1em 0 0 0;
-    /*border: solid pink;*/
+    margin: 2em 0 0 0;
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin: 0 0 0 0;
+  }
+
+  .sub_title {
+    color: #9ca3af;
+    margin: 0.5em 0 0 0;
+
   }
   
   .formGroup {
