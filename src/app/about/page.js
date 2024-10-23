@@ -24,7 +24,6 @@ const Imagedheader = () => {
 export default function About() {
   return (
     <div>
-      <Navbar />
       <Imagedheader />
       <div className={styles.aboutSection}>
         {/* Intro Section */}

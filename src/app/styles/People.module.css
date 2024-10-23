@@ -1,0 +1,74 @@
+/* People Container */
+.peopleContainer {
+    max-width: 800px;
+    margin: 2em auto; /* Centered on page */
+    padding: 2em; /* Spacing around the content */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center text */
+  }
+  
+  /* Title Styling */
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1em; /* Space below title */
+    color: #1e1e1e; /* Dark text color */
+  }
+  
+  /* Section Title Styling */
+  .sectionTitle {
+    font-size: 2rem;
+    margin: 1.5em 0 0.5em 0; /* Space above and below */
+    color: #1e1e1e; /* Dark text color */
+  }
+  
+  /* Eboard List */
+  .eboardList {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* Eboard Item */
+  .eboardItem {
+    font-size: 1.2rem; /* Increase font size for members */
+    color: #1e1e1e; /* Dark text color */
+    padding: 0.5em 0; /* Space between items */
+  }
+  
+  /* Position Style */
+  .position {
+    font-weight: bold; /* Bold for positions */
+  }
+  
+  /* Leader Container */
+  .leaderContainer {
+    margin: 1.5em 0; /* Space above and below leader containers */
+  }
+  
+  /* Leader Title */
+  .leaderTitle {
+    font-size: 1.8rem; /* Slightly smaller than section title */
+    margin-bottom: 0.5em; /* Space below leader title */
+    color: #1e1e1e; /* Dark text color */
+  }
+  
+  /* Analyst List */
+  .analystList {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* Analyst Item */
+  .analystItem {
+    font-size: 1rem; /* Font size for analysts */
+    color: #6b7280; /* Gray color for analysts */
+    padding: 0.25em 0; /* Space between items */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  /* Hover Effect on Analyst Items */
+  .analystItem:hover {
+    color: #f0a500; /* Accent color on hover */
+  }
+  

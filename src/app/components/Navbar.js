@@ -1,4 +1,6 @@
+'use client'
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import styles from '../styles/Navbar.module.css';
 
 export default function Navbar() {
@@ -6,17 +8,28 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.logo}>
         <Link href="/">
-          <p>PMT</p>
+          <motion.p
+            whileHover={{ scale: 1.1 }}  // Zoom effect on logo hover
+            transition={{ duration: 0.3 }}
+          >
+            PMT
+          </motion.p>
         </Link>
       </div>
       <ul className={styles.navLinks}>
-        <li><Link href="/"><p>Home</p></Link></li>
-        <li><Link href="/about"><p>About</p></Link></li>
-        <li><Link href="/people"><p>People</p></Link></li>
-        <li><Link href="/collaborations"><p>Collaborations</p></Link></li>
-        <li><Link href="/alumni"><p>Alumni</p></Link></li>
-        <li><Link href="/newsletter"><p>Newsletter</p></Link></li>
-        <li><Link href="/contact"><p>Contact</p></Link></li>
+        {['About', 'People', 'Collaborations', 'Alumni', 'Contact'].map((item) => (
+          <li key={item}>
+            <Link href={`/${item.toLowerCase()}`}>
+              <motion.p
+                whileHover={{ color: '#f0a500' }} // Change color on hover
+                transition={{ duration: 0.3 }}
+                className={styles.navLink}
+              >
+                {item}
+              </motion.p>
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

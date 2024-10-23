@@ -45,11 +45,13 @@
   background-color: #f0a500;
   color: #fff;
   font-size: 1.25rem;
+  font-weight: bold;
   border: none;
   border-radius: 50px;
   text-decoration: none;
   transition: background-color 0.3s;
   animation: fadeIn 3s ease-in-out;
+  margin: 1rem;
 }
 
 .ctaButton:hover {

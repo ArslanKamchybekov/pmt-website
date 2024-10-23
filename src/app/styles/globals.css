@@ -2,26 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define root theme variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9fafb; /* Light neutral background for a clean look */
+  --foreground: #1f2937; /* Darker neutral for readable text */
+  --primary: #1d4ed8; /* Tailwind's 'blue-600' for primary actions */
+  --secondary: #6b7280; /* Tailwind's 'gray-500' for secondary text */
+  --accent: #f0a500; /* Accent color for buttons or highlights */
+  --border-radius: 8px; /* Standard border-radius for cards, buttons */
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  --transition: all 0.3s ease-in-out; /* Smooth transitions */
 }
 
+/* Dark mode theme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #121212; /* Dark neutral background */
+    --foreground: #e5e7eb; /* Light gray text for dark mode */
+    --primary: #2563eb; /* Brighter blue for dark mode */
+    --secondary: #9ca3af; /* Softer gray for dark mode secondary text */
+    --accent: #facc15; /* Accent color in dark mode */
+    --box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5); /* Darker shadow for dark mode */
   }
 }
 
+/* Body styling */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif; /* More professional typeface */
+  transition: var(--transition);
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
+/* Global button styling */
+button {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+}
+
+button:hover {
+  background-color: var(--accent);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Slight hover effect for depth */
+}
+
+button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Typography for headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--foreground);
+  font-family: 'Poppins', sans-serif; /* Modern, clean font for headings */
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Utility classes */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .shadow-card {
+    box-shadow: var(--box-shadow);
+  }
+
+  .rounded-standard {
+    border-radius: var(--border-radius);
+  }
+
+  .transition-standard {
+    transition: var(--transition);
+  }
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
 }

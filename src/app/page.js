@@ -1,6 +1,5 @@
 'use client'
 import { useEffect } from 'react';
-import Navbar from './components/Navbar';
 import styles from './styles/Home.module.css';
 import { useState } from 'react';
 
@@ -31,9 +30,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <Navbar />
-      
+    <div>      
       {/* Hero Section with animated background */}
       <div
         className={styles.hero}
@@ -45,7 +42,8 @@ export default function Home() {
         <div className={styles.heroContent}>
           <h1 className={styles.title}>Invest in the Future</h1>
           <p className={styles.subtitle}>Unlock the power of finance with PMT</p>
-          <a href="/about" className={styles.ctaButton}>APPLY NOW</a>
+          <a href="https://forms.gle/7mXCx7iFVHxbQvDR7 " className={styles.ctaButton}>APPLY NOW</a>
+          <a href="https://forms.gle/8g3XxHHPRWJXKeCo8" className={styles.ctaButton}>SIGN UP FOR OUR NEWSLETTER</a>
         </div>
       </div>
     </div>

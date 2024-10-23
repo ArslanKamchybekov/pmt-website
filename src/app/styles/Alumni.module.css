@@ -1,0 +1,48 @@
+/* Alumni Container */
+.alumniContainer {
+  max-width: 1200px; /* Wider container for more cards */
+  margin: 2em auto; /* Centered on page */
+  padding: 2em; /* Spacing around the content */
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Center text */
+}
+
+/* Title Styling */
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em; /* Space below title */
+  color: #1e1e1e; /* Dark text color */
+}
+
+/* Description Styling */
+.description {
+  color: #6b7280; /* Gray color for the description */
+  margin-bottom: 1.5em; /* Space below description */
+}
+
+/* Card Grid */
+.cardGrid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 1.5em; /* Space between cards */
+}
+
+/* Company Card */
+.companyCard {
+  background-color: #fff; /* White background for cards */
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 1.5em; /* Padding inside cards */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-size: 1.2rem; /* Font size for companies */
+  color: #1e1e1e; /* Dark text color */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect on Company Cards */
+.companyCard:hover {
+  transform: translateY(-5px); /* Lift card slightly */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
