@@ -1,67 +1,129 @@
 .aboutSection {
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #333;
-  }
-  
-  /* Intro Section */
-  .intro {
+  /* padding: 2rem 1rem; */
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  color: #333;
+
+  & section {
+    width: 100%;
     background-color: #f0f0f0;
     padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 3rem;
+    /* margin-bottom: 5rem; */
+    height: 50vh;
   }
-  
-  /* Mission Section */
-  .mission {
+
+  & section:nth-child(2) {
+    width: 100%;
     padding: 2rem;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 3rem;
-  }
-  
-  /* Highlights Section */
-  .highlights {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .card {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .card img {
-    width: 60px;
-    margin-bottom: 1rem;
-  }
-  
-  .card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .card p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .grid {
-      grid-template-columns: 1fr;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    height: min-content;
+    background-color: #0a0a0a;
+    color: #ffffff;
+
+    & h1 {
+      width: min-content;
+      white-space: nowrap;
+      margin: auto;
     }
+
   }
-  
+
+  & h1 {
+    font-size: x-large;
+    font-weight: bold;
+    width: 50%;
+  }
+
+  & p:not(.card p) {
+    width: 50vw;
+    padding-left: 5px;
+  }
+}
+
+.caption {
+  background-color: #31343C;
+  color: #ffffff;
+  width: 100%;
+  /* height: 4rem; */
+  transform: translate(1rem, -2.5rem);
+  padding: 1rem;
+  font-style: italic;
+  font-size: small;
+}
+
+
+.footer {
+  height: 10vh;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  /* background-color: #2196F3; */
+  padding: 10px;
+
+  & div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* text-align: center; */
+    padding: 1rem;
+    padding-right: 0.25rem;
+    font-size: 30px;
+    font-style: italic;
+  }
+}
+
+/* Mission Section */
+/* .mission {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+} */
+
+/* Highlights Section */
+.highlights {
+  text-align: center;
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lazyCenter {
+  left: 50%;
+  transform: translateX(-50%);
+}
