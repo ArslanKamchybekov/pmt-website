@@ -1,24 +1,42 @@
-'use client'
+'use client';
 import { useState } from 'react';
 import styles from '../styles/Contact.module.css';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Simulate form submission
+    // Send email via API
     if (formData.name && formData.email && formData.message) {
-      setSubmitted(true);
-      // Reset form
-      setFormData({ name: '', email: '', message: '' });
+      try {
+        const response = await fetch('/api/sendEmail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          setSubmitted(true);
+          // Reset form
+          setFormData({ name: '', email: '', message: '' });
+        } else {
+          throw new Error('Failed to send message');
+        }
+      } catch (error) {
+        console.error(error);
+        setError(true);
+      }
     }
   };
 
@@ -80,6 +98,13 @@ export default function Contact() {
         {submitted && (
           <div className={styles.confirmationMessage}>
             <p>Thank you for contacting us! We'll get back to you soon.</p>
+          </div>
+        )}
+
+        {/* Error Message */}
+        {error && (
+          <div className={styles.errorMessage}>
+            <p>There was an error sending your message. Please try again later.</p>
           </div>
         )}
       </div>

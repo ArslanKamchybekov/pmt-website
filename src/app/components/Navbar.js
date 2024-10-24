@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className={styles.logo}>
         <Link href="/">
           <motion.p
-            whileHover={{ scale: 1.1 }}  // Zoom effect on logo hover
+            whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
             PMT
@@ -21,7 +21,7 @@ export default function Navbar() {
           <li key={item}>
             <Link href={`/${item.toLowerCase()}`}>
               <motion.p
-                whileHover={{ color: '#f0a500' }} // Change color on hover
+                whileHover={{ color: '#f0a500' }}
                 transition={{ duration: 0.3 }}
                 className={styles.navLink}
               >

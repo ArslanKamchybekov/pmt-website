@@ -19,12 +19,12 @@
   font-size: 1.75rem;
   font-weight: bold;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif; /* Professional font for branding */
+  font-family: 'Poppins', sans-serif;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .logo a:hover {
-  color: #f0a500; /* Accent color on hover */
+  color: #f0a500;
   transform: scale(1.05); /* Subtle zoom effect */
 }
 
@@ -45,30 +45,14 @@
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
   padding: 0.5rem;
   position: relative;
 }
 
-/* Animated underline on hover */
-.navLinks a::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #f0a500;
-  transition: width 0.3s ease;
-}
-
-.navLinks a:hover::before {
-  width: 100%;
-}
-
-/* Hover Effect on Nav Links */
 .navLinks a:hover {
   color: #f0a500;
+  transform: scale(1.2); /* Zoom effect on hover */
 }
 
 /* Mobile Responsive Design */
