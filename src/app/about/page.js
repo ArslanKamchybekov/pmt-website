@@ -83,14 +83,6 @@ export default function About() {
           </div>
         </section>
       </div>
-      {/* why? */}
-      <footer className={styles.footer}>
-        <div>
-          <p>
-          Portfolio Management Team
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
