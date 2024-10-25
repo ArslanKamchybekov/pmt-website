@@ -39,6 +39,9 @@
   font-size: 1.2rem; /* Font size for companies */
   color: #1e1e1e; /* Dark text color */
   transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Hover Effect on Company Cards */
