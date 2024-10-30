@@ -1,25 +1,89 @@
 import Navbar from '../components/Navbar';
 import styles from '../styles/About.module.css';
 
-const bg = "https://placehold.co/400x175/00000/31343C/svg?font=source-sans-pro&text=Placeholder%20SVG%20Bannerx";
+const bgBanner = "/uicBanner.jpg";
 
 const Imagedheader = () => {
   return (
     <div className='relative'>
       {/* background image */}
-      <div className='h-60'>
-        <img className="object-cover h-full w-full" src={bg} />
+      <div className={'h-60 bg-white flex justify-center items-center ' + styles.bannerFilter  }>
+        <img className="object-cover w-[57vw] m-auto [filter:blur(1px)]" src={bgBanner} />
       </div>
       {/* center text */}
       <div className={'absolute top-[25%] text-center leading-[3rem] ' + styles.lazyCenter}>
-        <h1 className={'pt-10 text-[3rem]'}>
+        <h1 className={'pt-10 text-[3rem] mb-0'}>
           About
         </h1>
-        <h2 className='text-[2rem] text-center italic'>built on caption text</h2>
+        <h2 className='text-[1.7rem] text-center italic'>built on caption text</h2>
       </div>
     </div>
   )
 }
+
+/**
+ * cards, simplified into JSON!
+ * 
+ * svgs: https://www.flaticon.com/authors/freepik
+ */
+const cardList = [
+  {
+    header: "100+ Members",
+    img: {
+      src: "/aboutCards/members.svg",
+      alt: "Members Icon"
+    },
+    desc: "Join our diverse group of analysts and general members."
+  },
+  {
+    header: "20+ Projects",
+    img: {
+      src: "/aboutCards/project.svg",
+      alt: "Projects Icon"
+    },
+    desc: "Real-world financial analysis projects and stock pitches."
+  },
+  {
+    header: "Collaborations",
+    img: {
+      src: "/aboutCards/teamwork.svg",
+      alt: "Collaborations Icon"
+    },
+    desc: "Work with leading organizations such as STAC, SEC, and DIG."
+  },
+  {
+    header: "Prestigious Alumni",
+    img: {
+      src: "/aboutCards/alum.svg",
+      alt: "Alumni Icon"
+    },
+    desc: "Real-world financial analysis projects and stock pitches."
+  }
+]
+
+/*
+<div className={styles.card}>
+              <img src="/members-icon.svg" alt="Members Icon" />
+              <h3>100+ Members</h3>
+              <p>Join our diverse group of analysts and general members.</p>
+            </div>
+            <div className={styles.card}>
+              <img src="/projects-icon.svg" alt="Projects Icon" />
+              <h3>20+ Projects</h3>
+              <p>Real-world financial analysis projects and stock pitches.</p>
+            </div>
+            <div className={styles.card}>
+              <img src="/collaborations-icon.svg" alt="Collaborations Icon" />
+              <h3>Collaborations</h3>
+              <p>Work with leading organizations such as STAC, SEC, and DIG.</p>
+            </div>
+            <div className={styles.card}>
+              <img src="/alumni-icon.svg" alt="Alumni Icon" />
+              <h3>Prestigious Alumni</h3>
+              <p>Our alumni work at top firms like Goldman Sachs, JP Morgan, and Citadel.</p>
+            </div>
+
+ */
 
 export default function About() {
   return (
@@ -58,28 +122,21 @@ export default function About() {
 
         {/* Highlights Section */}
         <section className={styles.highlights}>
-          <h2>Key Highlights</h2>
+          <h2 className='text-[#0a0a0a]'>Key Highlights</h2>
           <div className={styles.grid}>
-            <div className={styles.card}>
-              <img src="/members-icon.svg" alt="Members Icon" />
-              <h3>100+ Members</h3>
-              <p>Join our diverse group of analysts and general members.</p>
-            </div>
-            <div className={styles.card}>
-              <img src="/projects-icon.svg" alt="Projects Icon" />
-              <h3>20+ Projects</h3>
-              <p>Real-world financial analysis projects and stock pitches.</p>
-            </div>
-            <div className={styles.card}>
-              <img src="/collaborations-icon.svg" alt="Collaborations Icon" />
-              <h3>Collaborations</h3>
-              <p>Work with leading organizations such as STAC, SEC, and DIG.</p>
-            </div>
-            <div className={styles.card}>
-              <img src="/alumni-icon.svg" alt="Alumni Icon" />
-              <h3>Prestigious Alumni</h3>
-              <p>Our alumni work at top firms like Goldman Sachs, JP Morgan, and Citadel.</p>
-            </div>
+            {
+              cardList.map((element, index) => {
+                return (
+                  <div className={styles.card} key={index}>
+                    <div className='flex justify-around items-center'>
+                      <img src={element.img.src} alt={element.img.alt} />
+                      <h3>{element.header}</h3>
+                    </div>
+                    <p>{element.desc}</p>
+                  </div>
+                )
+              })
+            }
           </div>
         </section>
       </div>

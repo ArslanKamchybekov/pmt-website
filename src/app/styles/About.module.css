@@ -9,7 +9,11 @@
     background-color: #f0f0f0;
     padding: 2rem;
     /* margin-bottom: 5rem; */
-    height: 50vh;
+    min-height: 50vh;
+
+    & h1 {
+      color: #0a0a0a;
+    }
   }
 
   & section:nth-child(2) {
@@ -25,8 +29,12 @@
       width: min-content;
       white-space: nowrap;
       margin: auto;
+      color: #ffffff !important;
     }
+  }
 
+  & section:last-child {
+    height: 60vh
   }
 
   & h1 {
@@ -37,7 +45,8 @@
 
   & p:not(.card p) {
     width: 50vw;
-    padding-left: 5px;
+    /* padding-left: 5px; */
+    font-size: 1.2rem;
   }
 }
 
@@ -84,6 +93,7 @@
 .highlights {
   text-align: center;
   padding: 2rem;
+
 }
 
 .grid {
@@ -99,21 +109,22 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
 
-.card img {
-  width: 60px;
-  margin-bottom: 1rem;
-}
+  & img {
+    width: 60px;
+    margin-bottom: 1rem;
+  }
 
-.card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
+  & h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #0a0a0a;
+  }
 
-.card p {
-  font-size: 1rem;
-  color: #666;
+  & p {
+    font-size: 1rem;
+    color: #666;
+  }
 }
 
 /* Responsive Design */
@@ -126,4 +137,10 @@
 .lazyCenter {
   left: 50%;
   transform: translateX(-50%);
+}
+
+.bannerFilter {
+  filter: brightness(45%);
+-webkit-filter: brightness(45%);
+-moz-filter: brightness(45%);
 }
