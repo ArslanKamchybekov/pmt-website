@@ -27,8 +27,36 @@
   .eboardList {
     list-style: none; /* Remove bullet points */
     padding: 0; /* Remove default padding */
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    
+  }
+
+  .eboardMember {
+    margin: 4em 0 0 0;
+    padding: 2.5em 4em;
+    border: solid lightgrey 2px;
+    border-radius: 0.5em;
   }
   
+  .imageContainer {
+    display: flex;
+    margin: 0 auto;
+    object-fit: cover;
+    justify-content: center;
+    width: 18em;
+    border-radius: 2px;
+  }
+
+  .membersImage {
+    justify-content: center;
+    max-width: 15em;
+    max-height: 15em;
+    object-fit: fill;
+    /* padding: 0.5em 0;*/
+  }
+
   /* Eboard Item */
   .eboardItem {
     font-size: 1.2rem; /* Increase font size for members */
@@ -43,7 +71,13 @@
   
   /* Leader Container */
   .leaderContainer {
-    margin: 1.5em 0; /* Space above and below leader containers */
+    display: block;
+    margin: 1.5em auto; /* Space above and below leader containers */
+    /* background-color: lightgrey; */
+    width: 80%;
+    border: solid lightgrey 2px;
+    border-radius: 0.5em;
+    padding: 2em;
   }
   
   /* Leader Title */
@@ -51,6 +85,24 @@
     font-size: 1.8rem; /* Slightly smaller than section title */
     margin-bottom: 0.5em; /* Space below leader title */
     color: #1e1e1e; /* Dark text color */
+  }
+
+  .sectorContainer {
+    display: flex;
+    margin: 0 auto;
+    object-fit: cover;
+    justify-content: center;
+    width: 18em;
+  }
+
+  .sectorImage {
+    margin: 1em 0 0 0;
+    justify-content: center;
+    max-width: 10em;
+    max-height: 10em;
+    object-fit: cover;
+    border-radius: 0.2em;
+    /* padding: 0.5em 0;*/
   }
   
   /* Analyst List */
@@ -71,4 +123,5 @@
   .analystItem:hover {
     color: #f0a500; /* Accent color on hover */
   }
+
   
