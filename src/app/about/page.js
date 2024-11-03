@@ -94,14 +94,14 @@ export default function About() {
         <section>
           <h1>About PMT</h1>
           <p>
-            adss is a student-run finance organization that aims to prepare students for the world of
+            PMT is a student-run finance organization that aims to prepare students for the world of
             finance by offering hands-on experience, financial analysis, and collaboration
             with industry professionals. Our diverse membership is united by a passion for investment and markets.
           </p>
           <div className="right-0 mt-[-15vh] mr-[10vw] absolute max-w-[40vw]">
-            <img className="h-[37vh]" src='https://placehold.co/600x400/00000/FFFFFF/svg?font=source-sans-pro&text=Placeholder%20SVG%20Banner' />
+            <img className="h-[37vh]" src='/group-photo.jpg' />
             <div className={styles.caption}>
-              this is a test
+              caption text goes here
             </div>
           </div>
 
