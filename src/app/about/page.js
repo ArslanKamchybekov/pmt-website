@@ -8,14 +8,13 @@ const Imagedheader = () => {
     <div className='relative'>
       {/* background image */}
       <div className={'h-60 bg-white flex justify-center items-center ' + styles.bannerFilter  }>
-        <img className="object-cover w-[57vw] m-auto [filter:blur(1px)]" src={bgBanner} />
+        <img className="object-cover w-[57vw] m-auto [filter:blur(2px)]" src={bgBanner} />
       </div>
       {/* center text */}
       <div className={'absolute top-[25%] text-center leading-[3rem] ' + styles.lazyCenter}>
         <h1 className={'pt-10 text-[3rem] mb-0'}>
-          About
+          Portfolio Management Team
         </h1>
-        <h2 className='text-[1.7rem] text-center italic'>built on caption text</h2>
       </div>
     </div>
   )
