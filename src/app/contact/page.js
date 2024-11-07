@@ -1,5 +1,8 @@
 'use client';
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import styles from '../styles/Contact.module.css';
+
 
 export default function Contact() {
   return (

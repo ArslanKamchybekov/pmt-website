@@ -1,5 +1,6 @@
 'use client'; // Mark this as a client component
-
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import { motion } from 'framer-motion';
 import styles from '../styles/Alumni.module.css';
 
