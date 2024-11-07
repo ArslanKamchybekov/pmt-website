@@ -1,10 +1,12 @@
+/* Navbar.module.css */
+
 /* Navbar Container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1e1e1e;
-  padding: 0rem 2rem;
+  padding: 0.5rem 1.5rem;
   position: sticky;
   top: 0;
   width: 100%;
@@ -14,18 +16,12 @@
 }
 
 /* Logo Styling */
-.logo a {
+.logo p {
   color: #fff;
   font-size: 1.75rem;
   font-weight: bold;
-  text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.logo a:hover {
-  color: #f0a500;
-  transform: scale(1.05); /* Subtle zoom effect */
+  cursor: pointer;
 }
 
 /* Nav Links Container */
@@ -35,40 +31,51 @@
   gap: 2rem;
 }
 
-.navLinks li {
-  position: relative;
-}
-
-/* Nav Links Styling */
-.navLinks a {
+.navLink {
   color: #fff;
-  text-decoration: none;
   font-size: 1.1rem;
   font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease;
-  padding: 0.5rem;
-  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.navLinks a:hover {
-  color: #f0a500;
-  transform: scale(1.2); /* Zoom effect on hover */
+/* Hide menuToggle icon on desktop by default */
+.menuToggle {
+  display: none; /* Hidden by default */
 }
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
   .navbar {
-      flex-direction: column;
-      padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
   }
 
+  /* Show the hamburger menu icon on mobile */
+  .menuToggle {
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: auto;
+  }
+
+  /* Hide nav links initially and add a toggle button */
   .navLinks {
-      flex-direction: column;
-      gap: 1.5rem;
-      padding-top: 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding-top: 1rem;
   }
 
-  .navLinks li {
-      margin: 0;
+  .navLinks.show {
+    display: flex; /* Show when toggle is active */
+  }
+
+  /* Adjust logo size */
+  .logo p {
+    font-size: 1.5rem;
   }
 }
