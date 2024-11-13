@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            className="hidden sm:block"
           />
         </div>
 
