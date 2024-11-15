@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import styles from '../styles/People.module.css';
 
 const eboardMembers = [
-  { name: 'Eliezer Zagorin', position: 'President', img: '/eliezer-zagorin.png' },
+  { name: 'Eliezer Zagorin', position: 'President', img: '/eliezer-zagorin.jpg' },
   { name: 'Al Pakrosnis', position: 'Vice President', img: '/al-pakrosnis.jpg' },
   { name: 'Dilay Heybeli', position: 'Social Relations Chair', img: '/dilay-heybeli.jpg' },
   { name: 'Subhana Hanif', position: 'Assistant Director of Communications', img: '/subhana-hanif.jpg' },
